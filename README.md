@@ -13,6 +13,8 @@ To use this library you can simply include https://cdn.jsdelivr.net/gh/RandomGam
 
 btw stuff updates so remember to specify a version/commit for your library if you want to use a link and don't want your code to automatically update to the newest version of the library
 
+Also, this library is based on the Wireframe game engine, which is another project that I made, and is more specifically a C++ game engine/framework for graphics and audio abstractions for ease of use (it's 0-cost too :D). You can check that out here: https://github.com/RandomGamingDev/Wireframe
+
 ## Things to note if you're using this with p5.js
   In order to use this library with p5.js you're going to need to know a few things.
   1. p5.js doesn't currently use WebGL2 (although this might be different at the time your watching this), which is needed for this library, so I recommend using this other library I created: https://github.com/RandomGamingDev/WebGL2Tex, which adds WebGL2 to p5.js
