@@ -5,7 +5,7 @@ There's the `Texture.Base` class which is the base for the other classes which c
 `Texture.T2D`: 2D WebGL textures <br/>
 `Texture.T3D`: 3D WebGL textures <br/>
 
-Check to code and the WebGL documentation for the parameters needed.
+Check the code and the WebGL documentation for the parameters needed.
 
 Pair this up with other code that uses WebGL in order to get access to a more types of textures without having to deal with WebGL being WebGL :D
 
