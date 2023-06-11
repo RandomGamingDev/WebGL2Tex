@@ -1,7 +1,7 @@
 # WebGL2Tex
 A simple library for OOP encapsulation and abstraction of some of the different WebGL2 textures.
 
-Note: If you wanna see examples of how to use the library check out https://github.com/RandomGamingDev/WebGL2Tex/tree/main/examples and if you want to learn about the more complex features you can search on Google and check out the WebGL documentation since this is basically just an OOP overlay over the WebGL API to make it easier to use and learn which means that u should be able to figure out how to use the library from the WebGL documentation.
+Note: If you wanna see examples of how to use the library check out https://github.com/RandomGamingDev/WebGL2Tex/tree/main/examples and if you want to learn about the more complex features you can search on Google and check out the WebGL documentation since this is basically just an OOP overlay over the WebGL API to make it easier to use and learn which means that u should be able to figure out how to use the library from the WebGL documentation and searches on WebGL.
 
 There's the `Texture.Base` class which is the base for the other classes which currently are: <br/>
 `Texture.T2D`: 2D WebGL textures <br/>
