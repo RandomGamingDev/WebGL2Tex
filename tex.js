@@ -58,9 +58,17 @@ Texture.T2D = class extends Texture.Base {
               srcType, pixel,
               gl) {
     super(gl.createTexture(), gl.TEXTURE_2D, gl);
-    
-    this.bind();
+
+    this.level = level;
+    this.internalFormat = internalFormat;
+    this.res = [w, h];
     this.slot = slot;
+    this.border = border;
+    this.srcFormat = srcFormat;
+    this.srcType = srcType;
+    this.pixel = pixel;
+
+    this.bind();
     this.activate();
     this.data(
       level,
@@ -120,6 +128,17 @@ Texture.T3D = class extends Texture.Base {
                 srcType, pixel,
                 gl) {
       super(gl.createTexture(), gl.TEXTURE_3D, gl);
+
+
+      this.level = level;
+      this.internalFormat = internalFormat;
+      this.res = [w, h, l];
+      this.slot = slot;
+      this.border = border;
+      this.srcFormat = srcFormat;
+      this.srcType = srcType;
+      this.pixel = pixel;
+
       this.bind();
       this.slot = slot;
       this.activate();
