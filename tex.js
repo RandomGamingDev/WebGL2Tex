@@ -12,6 +12,14 @@ Texture.Base = class {
     this.gl.uniform1i(this.gl.getUniformLocation(shad, uniName), this.slot);
   }
   
+  pixelStoreI(param, val) {
+    this.gl.texParameteri(param, val);
+  }
+
+  pixelStoreF(param, val) {
+    this.gl.texParameterf(param, val);
+  }
+
   paramI(param, val) {
     this.gl.texParameteri(this.bufType, param, val);
   }
