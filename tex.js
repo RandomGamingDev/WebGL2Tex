@@ -40,6 +40,14 @@ Texture.Base = class {
     this.gl.bindTexture(this.bufType, null);
   }
   
+  subData(data, length, writeOffset = 0, readOffset = 0) {
+    this.gl.bufferSubData(this.bufType, writeOffset, data, readOffset, length);
+  }
+
+  getBufferSubData(data, readOffset, writeOffset) {
+    this.gl.getBufferSubData(this.bufType, readOffset, data, writeOffset);
+  }
+
   activate() {
     this.gl.activeTexture(this.gl.TEXTURE0 + this.slot);
   }
