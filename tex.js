@@ -8,7 +8,6 @@ Texture.Base = class {
   }
   
   setUniform(shad, uniName) {
-    this.activate();
     this.gl.uniform1i(this.gl.getUniformLocation(shad, uniName), this.slot);
   }
   
