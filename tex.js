@@ -67,8 +67,8 @@ Texture.T2D = class extends Texture.Base {
     this.srcType = srcType;
     this.pixel = pixel;
 
-    this.bind();
     this.activate();
+    this.bind();
     this.data(
       level,
       internalFormat,
@@ -138,9 +138,8 @@ Texture.T3D = class extends Texture.Base {
       this.srcType = srcType;
       this.pixel = pixel;
 
-      this.bind();
-      this.slot = slot;
       this.activate();
+      this.bind();
       this.data(
         level,
         internalFormat,
