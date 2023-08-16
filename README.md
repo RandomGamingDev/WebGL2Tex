@@ -25,9 +25,7 @@ Also, this library is based on the Wireframe game engine, which is another proje
   4. The shader used in p5.js isn't the same as a pure WebGL shader, and is instead a wrapper around it. When there's a shader you'll want to use your current shader's `._glProgram` variable/element.
   5. With 2D shaders (and perhaps other shader types in the future) p5.js does a weird thing where it resets all of the different uniforms to uniforms that it has stored in cache. This library is outside of the p5.js library and thus doesn't conform to its standards, which means that you'll have to override them, which you can do by doing this:
   ```js
-  shad.samplers[<where your shader is in the cache>].texture.bindTexture = () => null;
-  shad.samplers[<where your shader is in the cache>].texture.update = () => null;
-  shad.samplers[<where your shader is in the cache>].location = drawingContext.getUniformLocation(shad._glProgram, <the uniforms name>);
+  shad.samplers.length = 0;
   ```
   more specifically you'll want to do it after rendering something with the shader that you're using in case you're wondering when this data is generated so that you can replace it
   ofc you'll also want to make sure that you're writing to the correct location in cache
