@@ -76,7 +76,7 @@ Texture.T2D = class extends Texture.Base {
        internalFormat = this.internalFormat,
        w = this.res[0], h = this.res[1],
        border = this.border, srcFormat = this.srcFormat,
-       srcType = this.srcType, pixel = this.pixel) {
+       srcType = this.srcType, pixel = this.pixel, offset = 0) {
     this.gl.texImage2D(
       this.bufType,
       level,
@@ -86,7 +86,8 @@ Texture.T2D = class extends Texture.Base {
       border,
       srcFormat,
       srcType,
-      pixel
+      pixel,
+      offset
     );
   }
   
@@ -96,7 +97,8 @@ Texture.T2D = class extends Texture.Base {
           w, h,
           format,
           type,
-          source) {
+          source,
+          offset = 0) {
     this.gl.texSubImage2D(this.bufType,
                           level,
                           xoffset,
@@ -105,7 +107,8 @@ Texture.T2D = class extends Texture.Base {
                           h,
                           format,
                           type,
-                          source);
+                          source,
+                          offset);
   }
 }
 
@@ -138,7 +141,7 @@ Texture.T3D = class extends Texture.Base {
          internalFormat = this.internalFormat,
          w = this.res[0], h = this.res[1], l = this.res[2],
          border = this.border, srcFormat = this.srcFormat,
-         srcType = this.srcType, pixel = this.pixel) {
+         srcType = this.srcType, pixel = this.pixel, offset = 0) {
       this.gl.texImage3D(
         this.bufType,
         level,
@@ -147,7 +150,8 @@ Texture.T3D = class extends Texture.Base {
         border,
         srcFormat,
         srcType,
-        pixel
+        pixel,
+        offset
       );
     }
     
@@ -158,7 +162,8 @@ Texture.T3D = class extends Texture.Base {
             w, h, l,
             format,
             type,
-            source) {
+            source,
+            offset = 0) {
       this.gl.texSubImage3D(this.bufType,
                             level,
                             xoffset,
@@ -169,6 +174,7 @@ Texture.T3D = class extends Texture.Base {
                             l,
                             format,
                             type,
-                            source);
+                            source,
+                            offset);
     }
 }
