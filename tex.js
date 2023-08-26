@@ -69,23 +69,14 @@ Texture.T2D = class extends Texture.Base {
 
     this.activate();
     this.bind();
-    this.data(
-      level,
-      internalFormat,
-      w,
-      h,
-      border,
-      srcFormat,
-      srcType,
-      pixel
-    );
+    this.data();
   }
   
-  data(level,
-       internalFormat,
-       w, h,
-       border, srcFormat,
-       srcType, pixel) {
+  data(level = this.level,
+       internalFormat = this.internalFormat,
+       w = this.res[0], h = this.res[1],
+       border = this.border, srcFormat = this.srcFormat,
+       srcType = this.srcType, pixel = this.pixel) {
     this.gl.texImage2D(
       this.bufType,
       level,
@@ -140,22 +131,14 @@ Texture.T3D = class extends Texture.Base {
 
       this.activate();
       this.bind();
-      this.data(
-        level,
-        internalFormat,
-        w, h, l,
-        border,
-        srcFormat,
-        srcType,
-        pixel
-      );
+      this.data();
     }
     
-    data(level,
-         internalFormat,
-         w, h, l,
-         border, srcFormat,
-         srcType, pixel) {
+    data(level = this.level,
+         internalFormat = this.internalFormat,
+         w = this.res[0], h = this.res[1], l = this.res[2],
+         border = this.border, srcFormat = this.srcFormat,
+         srcType = this.srcType, pixel = this.pixel) {
       this.gl.texImage3D(
         this.bufType,
         level,
